@@ -4,21 +4,20 @@ function Filter() {
   return (
     <div className="filter">
       <h1>
-        Search for <b>Hanoi</b>
+        Tìm kiếm tại hà nội <b>Hanoi</b>
       </h1>
       <div className="top">
         <div className="item">
-          <label htmlFor="city">Location</label>
-          <input type="text" id="city" name="city" placeholder="City location" />
+          <label htmlFor="city">Quận</label>
+          <input type="text" id="city" name="city" placeholder="Tên quận" />
         </div>
       </div>
       <div className="bottom">
         <div className="item">
           <label htmlFor="type">Type</label>
           <select name="type" id="type">
-            <option value="">Any</option>
-            <option value="buy">Buy</option>
-            <option value="rnet">Rent</option>
+            <option value="buy">Trung cư mini</option>
+            <option value="rnet">Trọ thường</option>
           </select>
         </div>
         <div className="item">
@@ -31,12 +30,12 @@ function Filter() {
           </select>
         </div>
         <div className="item">
-          <label htmlFor="minPrice">Min Price</label>
-          <input type="number" id="minPrice" name="minPrice" placeholder="any" />
+          <label htmlFor="minPrice">Giá thấp nhất</label>
+          <input type="number" id="minPrice" name="minPrice" placeholder="100xxx" />
         </div>
         <div className="item">
-          <label htmlFor="maxPrice">Max Price</label>
-          <input type="text" id="maxPrice" name="maxPrice" placeholder="any" />
+          <label htmlFor="maxPrice">Giá cao nhất</label>
+          <input type="text" id="maxPrice" name="maxPrice" placeholder="100xxx" />
         </div>
         <div className="item">
           <label htmlFor="bedroom">Bedroom</label>

@@ -1,6 +1,6 @@
 import './NavBar.scss'
 import Logo from '~/assets/logo.png'
-import { Link } from 'react-dom'
+import { Link } from 'react-router-dom'
 import { useState } from 'react'
 import Menu from '~/assets/menu.png'
 
@@ -11,14 +11,14 @@ function NavBar() {
   return (
     <nav>
       <div className="left">
-        <a href="/" className="logo">
+        <Link to="/" className="logo">
           <img src={Logo} alt="logo" />
-          <span>LamaEstate</span>
-        </a>
-        <a href="/">Home</a>
-        <a href="/">About</a>
-        <a href="/">Contact</a>
-        <a href="/">Agents</a>
+          <span>trotot</span>
+        </Link>
+        <Link href="/">Trang chủ</Link>
+        <Link href="/">Về chúng tôi</Link>
+        <Link href="/">Liên hệ</Link>
+        <Link href="/">Hợp tác</Link>
       </div>
       <div className="right">
         {user ? (
@@ -28,17 +28,17 @@ function NavBar() {
               alt=""
             />
             <span>John Doe</span>
-            <a to="/" className="profile">
+            <Link to="/" className="profile">
               <div className="notification">3</div>
               <span>Profile</span>
-            </a>
+            </Link>
           </div>
         ) : (
           <>
-            <a href="/">Sign in</a>
-            <a href="/" className="register">
-              Sign up
-            </a>
+            <Link href="/">Đăng ký</Link>
+            <Link href="/" className="register">
+              Đăng nhập<picture></picture>
+            </Link>
           </>
         )}
       </div>
@@ -46,12 +46,12 @@ function NavBar() {
         <img src={Menu} alt="" onClick={() => setOpen((prev) => !prev)} />
       </div>
       <div className={open ? 'menu active' : 'menu'}>
-        <a href="/">Home</a>
-        <a href="/">About</a>
-        <a href="/">Contact</a>
-        <a href="/">Agents</a>
-        <a href="/">Sign in</a>
-        <a href="/">Sign up</a>
+        <Link href="/">Trang chủ</Link>
+        <Link href="/">Về chúng tôi</Link>
+        <Link href="/">Liên hệ</Link>
+        <Link href="/">Hợp tác</Link>
+        <Link href="/">Đăng nhập</Link>
+        <Link href="/">Đăng ký</Link>
       </div>
     </nav>
   )
